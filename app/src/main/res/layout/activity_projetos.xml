@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context="com.tccversaofinal.Activitys.ProjetosActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="256dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarprojetos"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:popupTheme="@style/AppTheme.PopupOverlay"
+                app:layout_collapseMode="pin"
+                />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/content_grid_layout" />
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_gravity="bottom|end"
+        android:id="@+id/menuFabProjetos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu_fab_label="Menu"
+        fab:menu_colorNormal="@color/laranja"
+        fab:menu_colorPressed="@color/laranja"
+        android:layout_margin="16dp"
+        app:menu_fab_size="normal">
+
+        <com.github.clans.fab.FloatingActionButton
+            fab:fab_size="normal"
+            android:id="@+id/addProjetoFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Adicionar Projeto"
+            app:fab_colorNormal="@color/laranja"
+            app:fab_colorPressed="@color/laranja"
+            android:src="@drawable/ic_add_projeto_branco"/>
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

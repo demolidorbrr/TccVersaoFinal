@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   tools:context="com.tccversaofinal.Activitys.AddProjetoActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="Adicionar Projeto"
+        android:textColor="@color/turquesaCerta"
+        android:textSize="30dp" />
+
+    <EditText
+        android:textColor="@color/laranja"
+        android:textColorHint="@color/laranja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nome"
+        android:id="@+id/edtNomeProjeto"/>
+
+    <EditText
+        android:textColor="@color/laranja"
+        android:textColorHint="@color/laranja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Descricao"
+        android:id="@+id/edtDescricaoProjeto"/>
+
+    <Button
+        android:layout_margin="8dp"
+        android:background="@drawable/botao_redondo_turquesa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ADICIONAR"
+        android:id="@+id/btnAdicionarProjeto"/>
+
+    <Button
+        android:layout_margin="8dp"
+        android:background="@drawable/botao_redondo_laranja"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cancelar"
+        android:id="@+id/btnCancelarNovoProjeto"/>
+
+</LinearLayout>

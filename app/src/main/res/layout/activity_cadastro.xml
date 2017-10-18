@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tccversaofinal.Activitys.CadastroActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="REGISTRAR"
+            android:textColor="@color/turquesaCerta"
+            android:textSize="35dp"
+            android:visibility="visible" />
+
+        <EditText
+            android:layout_margin="8dp"
+            android:textColor="@color/laranja"
+            android:id="@+id/edtCadNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nome Completo"
+            android:inputType="textPersonName"
+            android:textColorHint="@color/laranja" />
+
+        <EditText
+            android:layout_margin="8dp"
+            android:textColor="@color/laranja"
+            android:id="@+id/edtCadEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="E-Mail"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/laranja" />
+
+        <EditText
+            android:layout_margin="8dp"
+            android:textColor="@color/laranja"
+            android:id="@+id/edtCadSenha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:textColorHint="@color/laranja" />
+
+        <EditText
+            android:layout_margin="8dp"
+            android:textColor="@color/laranja"
+            android:id="@+id/edtCadSenha2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Repita sua senha"
+            android:inputType="textPassword"
+            android:textColorHint="@color/laranja" />
+
+        <Button
+
+            android:id="@+id/btnGravar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/botao_redondo_turquesa"
+            android:text="Registrar" />
+
+        <Button
+            android:id="@+id/btnCancelarCadastro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/botao_redondo_laranja"
+            android:text="CANCELAR" />
+
+    </LinearLayout>
+
+</LinearLayout>

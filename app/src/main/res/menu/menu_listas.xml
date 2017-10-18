@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <item
+        android:id="@+id/configuracoes"
+        android:title="Configurações"
+        android:icon="@drawable/ic_add_list_branco"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/ajuda"
+        android:title="Ajuda"
+        android:icon="@drawable/ic_add_list_branco"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/logout"
+        android:title="LogOut"
+        android:icon="@drawable/ic_add_list_branco"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_gerenciar_listas"
+        android:title="Gerenciar Listas"
+        android:icon="@drawable/ic_add_list_branco"
+        app:showAsAction="ifRoom" />
+
+</menu>

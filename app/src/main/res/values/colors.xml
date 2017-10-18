@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF23D6D6</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FFFC5A03</color>
+    <color name="laranja">#FFFC5A03 </color>
+    <color name="branco">#FFFFFFFF</color>
+    <color name="turquesaCerta">#FF23D6D6</color>
+
+    <color name="corPrimaria">#3F51B5</color>
+    <color name="corPrimariaEscura">#303F9F</color>
+    <color name="colorAccenta">#FF4081</color>
+
+    <color name="colorFAB">#FF9800</color>
+    <color name="colorFABPressed">#F57C00</color>
+    <color name="cinza">#FFB4ACAD</color>
+    <color name="transparente">#80000000</color>
+
+
+
+</resources>

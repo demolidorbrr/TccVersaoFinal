@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/aaaa"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tccversaofinal.Activitys.ListasActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="8dp"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:layout_scrollFlags="scroll">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+        <android.support.design.widget.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tab_layout"
+            app:tabMode="scrollable"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.view.ViewPager
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/view_pager">
+
+    </android.support.v4.view.ViewPager>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_gravity="bottom|end"
+        android:id="@+id/menuFabListas"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu_fab_label="Menu"
+        fab:menu_colorNormal="@color/laranja"
+        fab:menu_colorPressed="@color/laranja"
+        android:layout_margin="16dp"
+        app:menu_fab_size="normal">
+
+        <com.github.clans.fab.FloatingActionButton
+            fab:fab_size="normal"
+            android:id="@+id/addTarefaFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Adicionar Tarefa"
+            app:fab_colorNormal="@color/laranja"
+            app:fab_colorPressed="@color/colorPrimary"
+            android:src="@mipmap/ic_add_tarefa_branco"
+
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            fab:fab_size="normal"
+            android:id="@+id/addListaFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Adicionar Lista"
+            app:fab_colorNormal="@color/laranja"
+            app:fab_colorPressed="@color/colorPrimary"
+            android:src="@drawable/ic_add_list_branco"/>
+
+        <com.github.clans.fab.FloatingActionButton
+            fab:fab_size="normal"
+            android:id="@+id/addMembroFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Adicionar Membros"
+            app:fab_colorNormal="@color/laranja"
+            app:fab_colorPressed="@color/colorPrimary"
+            android:src="@mipmap/ic_add_membro_branco"
+
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            fab:fab_size="normal"
+            android:id="@+id/iniciarChatFab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Iniciar Chat"
+            app:fab_colorNormal="@color/laranja"
+            app:fab_colorPressed="@color/colorPrimary"
+            android:src="@drawable/ic_chat_branco"
+            />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+
+
+
+
+</android.support.design.widget.CoordinatorLayout>
