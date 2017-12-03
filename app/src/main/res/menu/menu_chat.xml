@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
+
+    <item android:id="@+id/item_conversa_grupo"
+        android:title="Conversa em grupo"
+        android:orderInCategory="200"
+        app:showAsAction="ifRoom"
+        android:icon="@mipmap/ic_conversa_grupo"/>
+
+    <item android:id="@+id/item_configuracoes"
+        android:title="@string/item_configuracoes"
+        android:orderInCategory="300"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/item_sair"
+        android:title="@string/item_sair"
+        android:orderInCategory="400"
+        app:showAsAction="never" />
+
+
+
+</menu>

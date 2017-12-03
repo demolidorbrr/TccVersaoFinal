@@ -18,7 +18,7 @@
         app:layout_scrollFlags="scroll">
 
         <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbarListas"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
@@ -26,6 +26,7 @@
             app:popupTheme="@style/AppTheme.PopupOverlay" />
 
         <android.support.design.widget.TabLayout
+            app:tabSelectedTextColor="@color/branco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/tab_layout"
@@ -49,7 +50,7 @@
         android:layout_height="match_parent"
         app:menu_fab_label="Menu"
         fab:menu_colorNormal="@color/laranja"
-        fab:menu_colorPressed="@color/laranja"
+        fab:menu_colorPressed="@color/colorPrimary"
         android:layout_margin="16dp"
         app:menu_fab_size="normal">
 

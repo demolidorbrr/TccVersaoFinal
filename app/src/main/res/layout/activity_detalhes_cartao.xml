@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    tools:context="com.tccversaofinal.Activitys.DetalhesCartaoActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:fitsSystemWindows="true"
+        >
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:expandedTitleTextAppearance="@android:color/transparent"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbarCartao"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:title="@string/cartaotexto"
+                app:layout_collapseMode="pin"
+
+
+                />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+        >
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="0dp"
+                app:cardElevation="5dp"
+                app:cardUseCompatPadding="true"
+
+                >
+
+                <LinearLayout
+                    android:id="@+id/layoutDescricaoCartao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/descricaoCartao"
+                        android:padding="12dp"
+                        android:textSize="20sp"
+                        android:layout_marginTop="12dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cartaotexto"
+                        android:textColor="@color/laranja"
+                        android:textStyle="bold"/>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/caminhoCartao"
+                            android:text="AAAAAAAAAAAAAAAAAAAAAA"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@mipmap/ic_relogio_laranja_certo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/dataEntregaTarefa"
+                    android:layout_gravity="center"
+                    android:text="Data de entrega não definida"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:background="@mipmap/ic_membros_laranja"
+                    />
+
+                <TextView
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:text="Responsáveis Pelo Cartão"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listaResponsaveisCartao"
+                    android:layout_gravity="center_horizontal|top"
+                    android:clickable="true"
+
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/ic_anexo_laranja"/>
+                <TextView
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:text="Anexos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ListView
+                    android:id="@+id/listViewAnexos"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_gravity="center_horizontal|top"
+                    android:clickable="true"
+                    />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/ic_comentario_laranja"/>
+
+                <EditText
+                    android:id="@+id/editComentarioCartao"
+                    android:inputType="textShortMessage|textMultiLine"
+                    android:gravity="center_vertical"
+                    android:textSize="20dp"
+                    android:hint="Comentar"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content" />
+
+                <ImageButton
+                    android:id="@+id/icNovoComentario"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:background="@mipmap/ic_ok_laranja"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:id="@+id/lv_comentarios_cartao"
+                    android:layout_gravity="center_horizontal|top"
+                    android:clickable="true"
+
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:layout_gravity="bottom|end"
+        android:id="@+id/menuFabDetalhesCartao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:menu_fab_label="Menu"
+        fab:menu_colorNormal="@color/laranja"
+        fab:menu_colorPressed="@color/colorPrimary"
+        android:layout_margin="16dp"
+        app:menu_fab_size="normal">
+
+        <com.github.clans.fab.FloatingActionButton
+            fab:fab_size="normal"
+            android:id="@+id/addMembroFabDetalhesCartao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Adicionar Responsável"
+            app:fab_colorNormal="@color/laranja"
+            app:fab_colorPressed="@color/colorPrimary"
+            android:src="@mipmap/ic_add_membro_branco"
+
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            fab:fab_size="normal"
+            android:id="@+id/addAnexoFabDetalhesCartao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Adicionar Anexo"
+            app:fab_colorNormal="@color/laranja"
+            app:fab_colorPressed="@color/colorPrimary"
+            android:src="@mipmap/ic_anexo_branco"
+
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            fab:fab_size="normal"
+            android:id="@+id/addDataEntregaDetalhesCartao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Adicionar Data Entrega"
+            app:fab_colorNormal="@color/laranja"
+            app:fab_colorPressed="@color/colorPrimary"
+            android:src="@mipmap/ic_data_branco"
+
+            />
+
+        <com.github.clans.fab.FloatingActionButton
+            fab:fab_size="normal"
+            android:id="@+id/iniciarChatDaTarefa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_label="Iniciar Chat"
+            app:fab_colorNormal="@color/laranja"
+            app:fab_colorPressed="@color/colorPrimary"
+            android:src="@drawable/ic_chat_branco"
+
+            />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+
+</android.support.design.widget.CoordinatorLayout>

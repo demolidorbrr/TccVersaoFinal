@@ -27,7 +27,7 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        switch (position){
+         switch (position){
             case 0:
                 return new FragmentA();
             case 1:
@@ -40,9 +40,9 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
                 return new FragmentE();
             case 5:
                 return new FragmentF();
-            default:
-                return null;
-        }
+           default:
+               return null;
+         }
     }
 
     @Override
@@ -63,5 +63,6 @@ public class MyFragmentPagerAdapter extends FragmentPagerAdapter {
             System.out.println("Catch the NullPointerException in FragmentPagerAdapter.finishUpdate");
         }
     }
+
 
 }

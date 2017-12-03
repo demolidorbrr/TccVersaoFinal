@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar Lista"
+        android:id="@+id/dialog_editar_cartao_titulo"
+        android:gravity="center"
+        android:textSize="25dp"
+        android:textColor="@color/cardview_dark_background"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alterar o nome da lista"
+        android:textColor="@color/cardview_dark_background"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtDialogListaNome"
+        />
+
+
+</LinearLayout>

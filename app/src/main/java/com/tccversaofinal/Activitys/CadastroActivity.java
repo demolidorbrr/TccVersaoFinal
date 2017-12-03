@@ -105,7 +105,7 @@ public class CadastroActivity extends AppCompatActivity {
                     Preferencias preferencias = new Preferencias(CadastroActivity.this);
                     String identificadorUsuarioLogado = Base64Custom.codificarBase64(usuarios.getEmail());
 
-                    preferencias.salvarDados(identificadorUsuarioLogado, usuarios.getNome());
+                    preferencias.salvarDados(identificadorUsuarioLogado, usuarios.getNome(), usuarios.getEmail());
                     pDialog.dismiss();
                     Toast.makeText(CadastroActivity.this, "Usuario cadastrado com Sucesso!", Toast.LENGTH_SHORT).show();
 

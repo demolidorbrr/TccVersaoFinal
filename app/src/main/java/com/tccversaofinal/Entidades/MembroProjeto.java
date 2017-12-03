@@ -9,6 +9,7 @@ public class MembroProjeto {
     private String dataAtribuicao;
     private String projetoID;
     private String usuarioID;
+    private String id;
 
     public MembroProjeto() {
 
@@ -36,6 +37,24 @@ public class MembroProjeto {
 
     public void setUsuarioID(String usuarioID) {
         this.usuarioID = usuarioID;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Membro Projeto{" +
+                "Usuario id='" + usuarioID + '\'' +
+                ", Projeto ID='" + projetoID + '\'' +
+                ", Data ='" + dataAtribuicao + '\'' +
+                '}';
+
     }
 
 }

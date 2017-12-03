@@ -7,6 +7,9 @@
     android:orientation="vertical"
    tools:context="com.tccversaofinal.Activitys.AddProjetoActivity">
 
+    <include android:id="@+id/toolbarAddProjeto"
+        layout="@layout/toolbar" />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

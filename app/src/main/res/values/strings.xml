@@ -2,5 +2,42 @@
     <string name="app_name">Tcc Versao Final</string>
     <string name="Adicionar">Adicionar</string>
     <string name="cancelar">Cancelar</string>
+    <string name="edit">Editar</string>
+    <string name="choose_action">Escolha uma opção</string>
+    <string name="choose_action_detalhes_cartao">Anexar </string>
+    <string name="choose_category_dialog">Escolha o destino</string>
+    <string name="ok">Ok</string>
+
+    <string-array name="actions_array">
+        <item>Mover Para...</item>
+        <item>Editar Tarefa</item>
+        <item>Arquivar Tarefa</item>
+        <item>Deletar permanentemente</item>
+    </string-array>
+
+    <string-array name="actions_array_cartao_comentario">
+        <item>Editar Comentario</item>
+        <item>Excluir Comentario</item>
+    </string-array>
+
+    <string-array name="actions_array_detalhes_cartao">
+        <item>Imagem</item>
+        <item>PDF</item>
+        <item>Texto</item>
+    </string-array>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="item_configuracoes">Configurações</string>
+    <string name="item_sair">Sair</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="botao_cadastrar">Cadastrar</string>
+    <string name="title_activity_validador">ValidadorActivity</string>
+    <string name="texto_validacao">Validação</string>
+    <string name="botao_validar">Validar</string>
+    <string name="botao_logar">Logar</string>
+    <string name="texto_cadastre">Não tem conta? Cadastre-se</string>
+    <string name="title_activity_cadastro_usuario">CadastroUsuarioActivity</string>
+    <string name="cartaotexto">Texto do Cartao</string>
+
 
 </resources>

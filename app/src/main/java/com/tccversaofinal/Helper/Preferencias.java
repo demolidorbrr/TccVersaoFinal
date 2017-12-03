@@ -23,6 +23,7 @@ public class Preferencias {
     private final String CHAVE_NOME_LISTA = "nomeLista";
     private final String CHAVE_NOME_USUARIO = "nomeUsuario";
     private final String CHAVE_NOME_PROJETO = "nomeProjeto";
+    private final String CHAVE_EMAIL_USUARIO_LOGADO = "emailUsuarioLogado";
 
 
     public Preferencias( Context contextoParametro){
@@ -33,10 +34,11 @@ public class Preferencias {
 
     }
 
-    public void salvarDados( String identificadorUsuario, String nomeUsuario ){
+    public void salvarDados( String identificadorUsuario, String nomeUsuario, String emailUsuario ){
 
         editor.putString(CHAVE_NOME_USUARIO, nomeUsuario);
         editor.putString(CHAVE_IDENTIFICADOR, identificadorUsuario);
+        editor.putString(CHAVE_EMAIL_USUARIO_LOGADO, emailUsuario);
         editor.commit();
 
     }
@@ -47,6 +49,10 @@ public class Preferencias {
 
     public String getNomeUsuario(){
         return preferences.getString(CHAVE_NOME_USUARIO, null);
+    }
+
+    public String getEmailUsuario(){
+        return preferences.getString(CHAVE_EMAIL_USUARIO_LOGADO, null);
     }
 
     public void salvarIdProjeto (String idProjeto){

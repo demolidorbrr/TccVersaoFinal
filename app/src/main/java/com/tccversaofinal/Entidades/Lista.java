@@ -7,7 +7,6 @@ package com.tccversaofinal.Entidades;
 public class Lista {
     private String id;
     private String nome;
-    private String posicao;
 
     public Lista() {
     }
@@ -26,13 +25,5 @@ public class Lista {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getPosicao() {
-        return posicao;
-    }
-
-    public void setPosicao(String posicao) {
-        this.posicao = posicao;
     }
 }

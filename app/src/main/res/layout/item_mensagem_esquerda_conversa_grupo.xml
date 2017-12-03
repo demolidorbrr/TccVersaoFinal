@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="20dp"
+                android:id="@+id/tv_nome_usuario_chat_conversa_grupo"
+                android:padding="8dp"
+                android:background="@color/branco"
+                android:textColor="@color/laranja"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lucas"/>
+
+            <TextView
+                android:id="@+id/hora_envio_mensagem_conversa_grupo"
+                android:textSize="13dp"
+                android:padding="8dp"
+                android:textColor="@color/preto"
+                android:background="@color/branco"
+                android:text=" 12/02/2017 às 12: 45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:textSize="18dp"
+                android:id="@+id/tv_mensagem_conversa_grupo"
+                android:padding="8dp"
+                android:background="@color/branco"
+                android:textColor="@color/preto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mensagem"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>

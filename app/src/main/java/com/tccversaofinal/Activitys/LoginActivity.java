@@ -23,6 +23,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.ValueEventListener;
 import com.tccversaofinal.DAO.ConfiguracaoFirebase;
+import com.tccversaofinal.Entidades.Projetos;
 import com.tccversaofinal.Entidades.Usuarios;
 import com.tccversaofinal.Helper.Base64Custom;
 import com.tccversaofinal.Helper.Preferencias;
@@ -53,6 +54,7 @@ public class LoginActivity extends AppCompatActivity {
         senhaLogin = (EditText) findViewById(R.id.edtSenhaLogin);
 
         verificarUsuarioLogado();
+
 
         txtIrParaCadastro.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -139,7 +141,7 @@ public class LoginActivity extends AppCompatActivity {
                             Usuarios usuarioRecuperado = dataSnapshot.getValue(Usuarios.class);
 
                             Preferencias preferencias = new Preferencias(LoginActivity.this);
-                            preferencias.salvarDados(identificadorUsuarioLogado, usuarioRecuperado.getNome());
+                            preferencias.salvarDados(identificadorUsuarioLogado, usuarioRecuperado.getNome(), usuarioRecuperado.getEmail());
 
                         }
 
@@ -155,8 +157,8 @@ public class LoginActivity extends AppCompatActivity {
                     Toast.makeText(LoginActivity.this, "Logado com Sucesso", Toast.LENGTH_SHORT).show();
                     emailLogin.setText("");
                     senhaLogin.setText("");
-                    Intent i = new Intent(LoginActivity.this, ProjetosActivity.class);
-                    startActivity(i);
+
+                    abrirTelaPrincipal();
                 } else{
                     pDialog.dismiss();
                     Toast.makeText(LoginActivity.this, "E-Mail e/ou Senha não conferem", Toast.LENGTH_SHORT).show();
@@ -185,11 +187,14 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(LoginActivity.this,s,Toast.LENGTH_SHORT).show();
     }
 
+    private void abrirTelaPrincipal(){
+        Intent intent = new Intent(LoginActivity.this, ProjetosActivity.class);
+        startActivity( intent );
+    }
     private void verificarUsuarioLogado() {
         autenticacao = ConfiguracaoFirebase.getFirebaseAutenticacao();
         if(autenticacao.getCurrentUser() != null){
-             Intent i = new Intent(LoginActivity.this, ProjetosActivity.class);
-             startActivity(i);
+             abrirTelaPrincipal();
         }
     }
 

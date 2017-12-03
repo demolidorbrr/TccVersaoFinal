@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:textColor="@color/laranja"
+        android:textSize="16sp"
+        android:id="@+id/txtNomeTarefaArquivada"
+        android:text="asdgagasgassgagasg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:textColor="@color/cinza"
+        android:textSize="16sp"
+        android:id="@+id/txtDescricaoTarefaArquivada"
+        android:text="asdgagasgassgagasg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

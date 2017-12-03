@@ -5,14 +5,31 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="@+id/configuracoes"
-        android:title="Configurações"
+        android:id="@+id/item_menu_gerenciar_listas"
+        android:title="Gerenciar Listas"
+        android:icon="@drawable/ic_add_list_branco"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/item_menu_membros_projeto"
+        android:title="Membros"
+        android:icon="@drawable/ic_add_list_branco"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/historicoProjeto"
+        android:title="Historico"
+        android:icon="@drawable/ic_add_list_branco"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/arquivoProjeto"
+        android:title="Arquivo"
         android:icon="@drawable/ic_add_list_branco"
         app:showAsAction="never" />
 
     <item
         android:id="@+id/ajuda"
-        android:title="Ajuda"
+        android:title="Sobre o apicativo"
         android:icon="@drawable/ic_add_list_branco"
         app:showAsAction="never" />
 
@@ -21,11 +38,5 @@
         android:title="LogOut"
         android:icon="@drawable/ic_add_list_branco"
         app:showAsAction="never" />
-
-    <item
-        android:id="@+id/menu_gerenciar_listas"
-        android:title="Gerenciar Listas"
-        android:icon="@drawable/ic_add_list_branco"
-        app:showAsAction="ifRoom" />
 
 </menu>

@@ -31,13 +31,80 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Activitys.ProjetosActivity"
+            android:parentActivityName=".Activitys.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activitys.AddProjetoActivity" />
+        <activity
+            android:name=".Activitys.AddProjetoActivity"
+            android:parentActivityName=".Activitys.ProjetosActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".Activitys.ListasActivity"
             android:parentActivityName=".Activitys.ProjetosActivity"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".Activitys.GerenciarListasActivity"></activity>
+        <activity
+            android:name=".Activitys.GerenciarListasActivity"
+            android:parentActivityName=".Activitys.ListasActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activitys.DetalhesCartaoActivity"
+            android:parentActivityName=".Activitys.ListasActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activitys.ChatActivity"
+            android:parentActivityName=".Activitys.ListasActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activitys.ConversaActivity"
+            android:parentActivityName=".Activitys.ChatActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Activitys.ChatActivity" />
+        </activity>
+        <activity
+            android:name=".Activitys.ConversaEmGrupoActivity"
+            android:parentActivityName=".Activitys.ChatActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            >
+        </activity>
+        <activity
+            android:name=".Activitys.ChatDetalhesCartaoActivity"
+            android:parentActivityName=".Activitys.DetalhesCartaoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".Activitys.AnexarImagemActivity"
+            android:parentActivityName=".Activitys.DetalhesCartaoActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".Activitys.AnexarPDFActivity"
+            android:parentActivityName=".Activitys.DetalhesCartaoActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".Activitys.HistoricoTarefaActivity"
+            android:parentActivityName=".Activitys.DetalhesCartaoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activitys.AnexarTextoActivity"
+            android:parentActivityName=".Activitys.DetalhesCartaoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activitys.HistoricoProjetoActivity"
+            android:parentActivityName=".Activitys.ListasActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activitys.GerenciarMembrosActivity"
+            android:parentActivityName=".Activitys.ListasActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Activitys.AjudaActivity"
+            android:parentActivityName=".Activitys.ListasActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity android:name=".Activitys.ArquivoActivity"
+            android:parentActivityName=".Activitys.ListasActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
     </application>
 
 </manifest>

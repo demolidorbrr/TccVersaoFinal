@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tccversaofinal.Activitys.ConversaEmGrupoActivity">
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/tb_conversa_grupo">
+
+    </include>
+
+    <ListView
+        android:dividerHeight="0.0dp"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:layout_above="@+id/ChatEmGrupo"
+        android:layout_below="@+id/tb_conversa_grupo"
+        android:id="@+id/lv_conversasEmGrupo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+    </ListView>
+
+    <LinearLayout
+        android:id="@+id/ChatEmGrupo"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/branco"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/mensagemChatEmGrupo"
+            android:layout_weight="1"
+            android:textColorHint="@color/preto"
+            android:textColor="@color/preto"
+            android:hint="Mensagem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
+
+        <ImageButton
+            android:id="@+id/botaoEnviarMensagemEmGrupo"
+            android:backgroundTint="@color/turquesaCerta"
+            android:src="@drawable/ic_send_24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

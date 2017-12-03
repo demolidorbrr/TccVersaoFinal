@@ -53,12 +53,13 @@ public class Usuarios {
         this.senha = senha;
     }
 
-    //  @Override
-    // public String toString() {
-    //   return "Projetos{" +
-    //      "id='" + id + '\'' +
-    //      ", nome='" + Nome + '\'' +
-    //      '}';
-    //    return "Nome";
-    // }
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "Usuario id='" + id + '\'' +
+                ", Nome='" + Nome + '\'' +
+                ", Email ='" + email + '\'' +
+                '}';
+
+    }
 }

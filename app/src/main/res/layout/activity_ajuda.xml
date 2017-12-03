@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tccversaofinal.Activitys.AjudaActivity">
+
+    <include android:id="@+id/toolbarAjuda"
+        layout="@layout/toolbar" />
+
+    <TextView
+        android:textSize="16dp"
+        android:id="@+id/textoSobreoCartao"
+        android:layout_margin="20dp"
+        android:text="Com uma interface simples e intuitiva, este aplicativo de groupware busca auxiliar na comunicaçao e na coordenaçao de grupos de trabalho."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbarAjuda" />
+
+    <TextView
+        android:textSize="16dp"
+        android:layout_margin="20dp"
+        android:layout_below="@+id/textoSobreoCartao"
+        android:text="Basta clicar para acessar os menus na extremidade inferior direta e superior direita. Um clique longo em uma tarefa ativa diversas opçoes, como trocar de lista ou deletar. E basta um clique simples para acessa-la."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

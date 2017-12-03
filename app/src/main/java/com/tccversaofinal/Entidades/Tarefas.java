@@ -9,6 +9,7 @@ public class Tarefas {
     private String id;
     private String nome;
     private String descricao;
+    private String dataEntrega;
 
     public Tarefas() {
     }
@@ -36,6 +37,15 @@ public class Tarefas {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+    public String getDataEntrega() {
+        return dataEntrega;
+    }
+
+    public void setDataEntrega(String dataEntrega) {
+        this.dataEntrega = dataEntrega;
+    }
+
 
     @Override
     public String toString() {

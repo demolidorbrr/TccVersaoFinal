@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -64,10 +65,6 @@ public class FragmentA extends android.support.v4.app.Fragment{
         adapter = new AdaptadorFragmentA(getActivity(), tarefas );
         listView.setAdapter(adapter);
 
-
-
-
-
         return view;
     }
 
@@ -80,6 +77,6 @@ public class FragmentA extends android.support.v4.app.Fragment{
     @Override
     public void onStop() {
         super.onStop();
-        // firebase.removeEventListener(valueEventListenerTarefas);
+         firebase.removeEventListener(valueEventListenerTarefas);
     }
 }

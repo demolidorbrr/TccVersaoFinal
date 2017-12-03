@@ -29,6 +29,7 @@ import com.tccversaofinal.Entidades.MembroProjeto;
 import com.tccversaofinal.Entidades.Projetos;
 import com.tccversaofinal.Entidades.Usuarios;
 import com.tccversaofinal.Helper.Base64Custom;
+import com.tccversaofinal.Helper.Conexao;
 import com.tccversaofinal.Helper.Preferencias;
 import com.tccversaofinal.R;
 
@@ -56,8 +57,15 @@ public class ProjetosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_projetos);
 
+        if (!Conexao.verificaConexao(this)) {
+            Conexao.initToast(this, "Você não tem conexão com internet");
+            finish();
+        }
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbarprojetos);
         toolbar.setTitle("Projetos");
+        toolbar.setTitleTextColor(getResources().getColor(R.color.branco));
+        toolbar.setNavigationIcon(R.mipmap.ic_voltar_menor_branco);
 
         setSupportActionBar(toolbar);
 
@@ -88,77 +96,10 @@ public class ProjetosActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ProjetosActivity.this, AddProjetoActivity.class);
                 startActivity(intent);
-                finish();
             }
         });
 
-/*
-        adicionarProjeto.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
 
-                AlertDialog.Builder mBuilder = new AlertDialog.Builder(view.getContext(), R.style.AlertDialogLightTheme);
-                view = view.inflate(ProjetosActivity.this, R.layout.dialog_add_projetos, null);
-                //     view = inflater.inflate(R.layout.dialog_add_projetos, null);
-                final EditText nomeTarefa = (EditText) view.findViewById(R.id.edtDialogNomeProjeto);
-                final EditText descricaoTarefa = (EditText) view.findViewById(R.id.edtDialogDescricaoProjeto);
-
-                mBuilder.setView(view).setPositiveButton(view.getResources().getString(R.string.Adicionar), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        String edtNomeTarefa = nomeTarefa.getText().toString();
-                        String edtDescricaoTarefa = descricaoTarefa.getText().toString();
-
-                        if(!nomeTarefa.getText().toString().equals("") || !descricaoTarefa.getText().toString().equals("")){
-                            pDialog = new ProgressDialog(ProjetosActivity.this);
-                            pDialog.setMessage("Adicionando..");
-                            pDialog.show();
-
-                            Projetos projeto = new Projetos();
-                            projeto.setNome(edtNomeTarefa);
-                            projeto.setDescricao(edtDescricaoTarefa);
-                            projeto.setUsuarios(usuarios);
-                            projeto.setId(String.valueOf(UUID.randomUUID()));
-
-                            Preferencias preferencias = new Preferencias(ProjetosActivity.this);
-                            String identificadorProjeto = preferencias.getIdProjeto();
-                            firebase = ConfiguracaoFirebase.getFirebase();
-
-                            try {
-                                firebase.child("projetos").child(projeto.getId()).setValue(projeto);
-
-                                MembroProjeto membro = new MembroProjeto();
-                                membro.setUsuarioID(usuarios.getId());
-                                membro.setProjetoID(projeto.getId());
-
-                                String id = String.valueOf(UUID.randomUUID());
-
-                                firebase.child("membroprojeto").child(id).setValue(membro);
-                                pDialog.dismiss();
-
-                                Toast.makeText(ProjetosActivity.this, "Projeto Adicionado com Sucesso", Toast.LENGTH_SHORT).show();
-                            } catch (Exception e) {
-                                e.printStackTrace();
-                                Toast.makeText(ProjetosActivity.this, "Não foi possível Adicionar", Toast.LENGTH_SHORT).show();
-
-                            }
-
-                        }else {
-                            Toast.makeText(ProjetosActivity.this, "Preencha todos os campos!", Toast.LENGTH_SHORT).show();
-                        }
-                    }
-                })
-                        .setNegativeButton(view.getResources().getString(R.string.cancelar), new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialogInterface, int i) {
-                                dialogInterface.dismiss();
-                            }
-                        });
-                final AlertDialog dialog = mBuilder.create();
-                dialog.show();
-            }
-        });
-*/
         firebase = ConfiguracaoFirebase.getFirebase().child("membroprojeto");
 
         valueEventListenerMembros = new ValueEventListener() {
@@ -178,8 +119,6 @@ public class ProjetosActivity extends AppCompatActivity {
                         System.out.println("id adicionado ...");
                     }
                 }
-
-
 
             }
 
